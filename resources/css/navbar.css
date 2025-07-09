@@ -1,0 +1,73 @@
+.nav-logo {
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-family: "Leckerli One", 'cursive';
+    transition: .3s;
+    &:hover{
+        transform: scale(1.07);
+        text-shadow: 
+            2px 2px 0px transparent,
+            4px 4px 5px #FAC122;
+    }
+}
+
+.span1-logo{
+    color: #FAC122;
+}
+
+
+.nav-link-prop {
+    font-size: 20x;
+    font-weight: 600;
+    color: #d7d7d7;
+    /* position: relative; */
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-link-prop:hover{
+    color: white;
+}
+
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(250, 193, 34);
+    border-radius: 8px;
+    background-color: transparent;
+    font-weight: 600;
+    /* cubic-bezier hace que  */
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    &:hover{
+        color: #212121;
+    }
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(250, 193, 34);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.nav-btn:hover::before {
+    scale: 4;
+}
+
+.nav-btn:active {
+    scale: 0.9;
+}

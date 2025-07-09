@@ -1,0 +1,185 @@
+.section-container-1{
+    background: radial-gradient(rgba(0, 0, 0, 0.377), black 70%), url("/images/section1.png");
+    background-repeat: no-repeat;
+    /* BACKGROUND SIZE COVER MODIFICA EL TAMAÑO OCUPANDO LO NECESARIO*/
+    background-size: cover;
+    background-position: center center ;
+    /* BACKGROUND ATTACHMENT FIXED hace que el fondo no se mueva al hacer scroll
+     */
+    /* background-attachment: fixed; */
+}
+
+.section-container-2 {
+    background: radial-gradient(rgba(0, 0, 0, 0.377), black 75%), url("/images/section2.png");
+    background-repeat: no-repeat;
+    /* BACKGROUND SIZE COVER MODIFICA EL TAMAÑO OCUPANDO LO NECESARIO*/
+    background-size: cover;
+    background-position: top;
+    /* BACKGROUND ATTACHMENT FIXED hace que el fondo no se mueva al hacer scroll
+     */
+    /* background-attachment: fixed; */
+}
+
+.section-container-3{
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("/images/section3.png");
+    background-repeat: no-repeat;
+    /* BACKGROUND SIZE COVER MODIFICA EL TAMAÑO OCUPANDO LO NECESARIO*/
+    background-size: cover;
+    background-position: center center ;
+    /* BACKGROUND ATTACHMENT FIXED hace que el fondo no se mueva al hacer scroll
+     */
+    /* background-attachment: fixed; */
+}
+
+.container-hijo img{
+    width: 375px;
+}
+
+.chef-img{
+    transition: 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.03);
+        filter: drop-shadow(5px 5px 10px #FAC122);
+    }
+}
+
+
+.btn-section {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid rgb(250, 193, 34);
+    border-radius: 8px;
+    background-color: rgb(250, 193, 34);
+    font-weight: 600;
+    /* cubic-bezier hace que  */
+    transition: 0.2s ease;
+    overflow: hidden;
+    &:hover{
+        background-color: #e0aa00;
+        border: 2px solid #e0aa00;
+    }
+}
+
+.btn-section:active {
+    scale: 0.9;
+}
+
+.btn-click {
+    transition: 0.3s ease-in-out;
+}
+.btn-click:active {
+    scale: 0.9;
+}
+
+@media screen and (max-width:768px) {
+    .section1{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .container-hijo img{
+        width: 250px;
+    }
+    
+}
+
+
+/* PARA HACER LA SEGUNDA SECTION BIENVENIDOS */
+@keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #2D3748 0%, #4A5568 50%, #FAC122 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-shadow-hover:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .card-shadow-menu:hover {
+            box-shadow: 0 20px 40px rgba(250, 193, 34, 0.15);
+        }
+        .card-shadow-orders:hover {
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .card-shadow-analytics:hover {
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+        }
+        .card-shadow-customer:hover {
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+        }
+        .image-hover:hover img {
+            transform: scale(1.1);
+        }
+        .overlay-gradient {
+            background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+        }
+        .accent-line::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FAC122;
+            transition: width 0.4s ease;
+        }
+        .accent-line:hover::after {
+            width: 40px;
+        }
+
+
+
+/*  PARA LA SECTION DE COMENTARIOS */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        .animate-pulse-hover:hover {
+            animation: pulse 0.3s ease-in-out;
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.3;
+        }
+
+
+/* PARA TARJETA DE PAGO */
+.card-style{
+    transition: ease 0.5s;
+    &:hover{
+        box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.5);
+        transform: scale(1.05); 
+    }
+}
